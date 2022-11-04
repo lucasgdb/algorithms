@@ -1,0 +1,35 @@
+{
+   "name": "algorithms",
+   "version": "1.0.0",
+   "description": "public workspace to store my algorithms",
+   "scripts": {
+      "test": "vitest",
+      "coverage": "vitest run --coverage"
+   },
+   "dependencies": {
+      "ts-node": "^10.9.1"
+   },
+   "devDependencies": {
+      "@vitest/coverage-c8": "^0.24.5",
+      "prettier": "^2.7.1",
+      "typescript": "^4.8.4",
+      "vitest": "^0.24.5"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/lucasgdb/algorithms.git"
+   },
+   "keywords": [
+      "algorithms",
+      "algorithm",
+      "js",
+      "ts",
+      "node"
+   ],
+   "author": "lucasgdb",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/lucasgdb/algorithms/issues"
+   },
+   "homepage": "https://github.com/lucasgdb/algorithms#readme"
+}
