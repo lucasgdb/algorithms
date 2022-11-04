@@ -42,7 +42,12 @@ describe('validateCPF', () => {
       });
    });
 
-   it('should throw an error if CPF does not have 11 characters', () => {
+   it('should throw an error if CPF has more than 11 characters', () => {
+      const invalidCPF = '123456789012';
+      expect(() => validateCPF(invalidCPF)).toThrowError('CPF must have 11 characters length');
+   });
+
+   it('should throw an error if CPF has less than 11 characters', () => {
       const invalidCPF = '1234567890';
       expect(() => validateCPF(invalidCPF)).toThrowError('CPF must have 11 characters length');
    });
