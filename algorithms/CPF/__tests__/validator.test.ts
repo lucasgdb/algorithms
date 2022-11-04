@@ -28,15 +28,15 @@ describe('validateCPF', () => {
 
    describe('validating false CPFs', () => {
       it('should validate a false CPF', () => {
-         const validCPF = '96027147009';
-         const validatedCPF = validateCPF(validCPF);
+         const invalidCPF = '96027147009';
+         const validatedCPF = validateCPF(invalidCPF);
 
          expect(validatedCPF).toBe(false);
       });
 
       it('should validate a false CPF', () => {
-         const validCPF = '37655834001';
-         const validatedCPF = validateCPF(validCPF);
+         const invalidCPF = '37655834001';
+         const validatedCPF = validateCPF(invalidCPF);
 
          expect(validatedCPF).toBe(false);
       });
