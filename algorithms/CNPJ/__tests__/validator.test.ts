@@ -31,6 +31,13 @@ describe('validateCNPJ', () => {
 
          expect(validatedCNPJ).toBe(true);
       });
+
+      it('should validate true CNPJ', () => {
+         const validCNPJ = '90.014.583/0001-00';
+         const validatedCNPJ = validateCNPJ(validCNPJ);
+
+         expect(validatedCNPJ).toBe(true);
+      });
    });
 
    describe('validating false CNPJs', () => {
