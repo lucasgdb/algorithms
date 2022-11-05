@@ -7,5 +7,5 @@ export function getFirstCheckerTypist(nineCPFNumbers: string) {
    }
 
    const module = (total * 10) % 11;
-   return module === 10 ? 0 : module;
+   return module === 10 ? '0' : module.toString();
 }

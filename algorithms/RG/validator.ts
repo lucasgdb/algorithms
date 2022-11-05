@@ -18,7 +18,7 @@ export function validateRG(RG: string) {
    }
 
    const eightNumbers = transformedRG.substring(0, 8);
-   const checkerTypist = getCheckerTypist(eightNumbers).toString().toUpperCase();
+   const checkerTypist = getCheckerTypist(eightNumbers);
    const RGCheckerTypist = transformedRG.at(8)?.toUpperCase();
 
    return checkerTypist === RGCheckerTypist;

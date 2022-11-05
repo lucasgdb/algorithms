@@ -30,8 +30,8 @@ export function validateCPF(CPF: string) {
    const firstNineCPFDigits = transformedCPF.substring(0, 9);
    const firstTenCPFDigits = transformedCPF.substring(0, 10);
 
-   const firstCheckerTypist = getFirstCheckerTypist(firstNineCPFDigits).toString();
-   const secondCheckerTypist = getSecondCheckerTypist(firstTenCPFDigits).toString();
+   const firstCheckerTypist = getFirstCheckerTypist(firstNineCPFDigits);
+   const secondCheckerTypist = getSecondCheckerTypist(firstTenCPFDigits);
 
    const CPFFirstCheckerTypist = transformedCPF.at(9);
    const CPFSecondCheckerTypist = transformedCPF.at(10);

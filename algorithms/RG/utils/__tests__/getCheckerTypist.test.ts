@@ -7,7 +7,7 @@ describe('getCheckerTypist', () => {
       const eightNumbers = '45895554';
       const checkerTypist = getCheckerTypist(eightNumbers);
 
-      expect(checkerTypist).toBe(1);
+      expect(checkerTypist).toBe('1');
    });
 
    it('should get checker typist correctly (module = 1)', () => {
@@ -21,6 +21,6 @@ describe('getCheckerTypist', () => {
       const eightNumbers = '42248841';
       const checkerTypist = getCheckerTypist(eightNumbers);
 
-      expect(checkerTypist).toBe(0);
+      expect(checkerTypist).toBe('0');
    });
 });

@@ -8,12 +8,12 @@ export function getCheckerTypist(eightRGNumbers: string) {
 
    const module = total % 11;
    if (module === 0) {
-      return 0;
+      return '0';
    }
 
    if (module === 1) {
       return 'X';
    }
 
-   return 11 - module;
+   return (11 - module).toString();
 }
