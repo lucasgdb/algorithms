@@ -1,9 +1,9 @@
 export function getFirstCheckerTypist(nineCPFNumbers: string) {
-   let divider = 10;
+   let multiplier = 10;
    let total = 0;
 
    for (let i = 0; i < nineCPFNumbers.length; i++) {
-      total += Number(nineCPFNumbers[i]) * divider--;
+      total += Number(nineCPFNumbers[i]) * multiplier--;
    }
 
    const module = (total * 10) % 11;

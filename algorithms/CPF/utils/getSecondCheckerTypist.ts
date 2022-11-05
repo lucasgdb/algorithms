@@ -1,9 +1,9 @@
 export function getSecondCheckerTypist(tenCPFNumbers: string) {
-   let divider = 11;
+   let multiplier = 11;
    let total = 0;
 
    for (let i = 0; i < tenCPFNumbers.length; i++) {
-      total += Number(tenCPFNumbers[i]) * divider--;
+      total += Number(tenCPFNumbers[i]) * multiplier--;
    }
 
    const module = (total * 10) % 11;

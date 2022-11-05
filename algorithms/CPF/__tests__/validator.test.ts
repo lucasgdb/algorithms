@@ -40,6 +40,13 @@ describe('validateCPF', () => {
 
          expect(validatedCPF).toBe(false);
       });
+
+      it('should validate a false CPF', () => {
+         const invalidCPF = '376.558.340-01';
+         const validatedCPF = validateCPF(invalidCPF);
+
+         expect(validatedCPF).toBe(false);
+      });
    });
 
    it('should throw an error if CPF has more than 11 characters', () => {
