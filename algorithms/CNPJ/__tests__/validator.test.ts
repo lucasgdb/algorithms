@@ -61,7 +61,7 @@ describe('validateCNPJ', () => {
       expect(() => validateCNPJ(invalidCNPJ)).toThrowError('CNPJ must have 14 characters length');
    });
 
-   it('should throw an error if CNPJ has less than 9 characters', () => {
+   it('should throw an error if CNPJ has less than 14 characters', () => {
       const invalidCNPJ = '1234567800012';
       expect(() => validateCNPJ(invalidCNPJ)).toThrowError('CNPJ must have 14 characters length');
    });
