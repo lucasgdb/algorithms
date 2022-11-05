@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+
 import { generateRG } from '../generator';
 import { validateRG } from '../validator';
 

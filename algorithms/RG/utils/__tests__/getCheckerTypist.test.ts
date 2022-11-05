@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+
 import { getCheckerTypist } from '../getCheckerTypist';
 
 describe('getCheckerTypist', () => {
