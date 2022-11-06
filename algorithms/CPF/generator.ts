@@ -7,6 +7,6 @@ export function generateCPF() {
    const firstCheckerTypist = getFirstCheckerTypist(partialCPF);
    const secondCheckerTypist = getSecondCheckerTypist(`${partialCPF}${firstCheckerTypist}`);
 
-   const CPF = `${partialCPF}${firstCheckerTypist}${secondCheckerTypist}`;
+   const CPF = partialCPF + firstCheckerTypist + secondCheckerTypist;
    return CPF;
 }

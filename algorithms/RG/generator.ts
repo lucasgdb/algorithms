@@ -5,6 +5,6 @@ export function generateRG() {
    const partialRG = generateNumbers({ amount: 8 });
    const checkerTypist = getCheckerTypist(partialRG);
 
-   const RG = `${partialRG}${checkerTypist}`;
+   const RG = partialRG + checkerTypist;
    return RG;
 }
