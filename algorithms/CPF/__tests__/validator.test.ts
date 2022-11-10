@@ -24,6 +24,13 @@ describe('validateCPF', () => {
 
          expect(validatedCPF).toBe(true);
       });
+
+      it('should validate a true CPF', () => {
+         const validCPF = '882533770-10';
+         const validatedCPF = validateCPF(validCPF);
+
+         expect(validatedCPF).toBe(true);
+      });
    });
 
    describe('validating false CPFs', () => {
@@ -47,6 +54,26 @@ describe('validateCPF', () => {
 
          expect(validatedCPF).toBe(false);
       });
+
+      it('should validate a false CPF', () => {
+         const invalidCPF = '376558340-01';
+         const validatedCPF = validateCPF(invalidCPF);
+
+         expect(validatedCPF).toBe(false);
+      });
+
+      it('should validate a false CPF that is eleven equal numbers', () => {
+         expect(validateCPF('11111111111')).toBe(false);
+         expect(validateCPF('111.111.111-11')).toBe(false);
+         expect(validateCPF('22222222222')).toBe(false);
+         expect(validateCPF('33333333333')).toBe(false);
+         expect(validateCPF('44444444444')).toBe(false);
+         expect(validateCPF('55555555555')).toBe(false);
+         expect(validateCPF('66666666666')).toBe(false);
+         expect(validateCPF('77777777777')).toBe(false);
+         expect(validateCPF('88888888888')).toBe(false);
+         expect(validateCPF('99999999999')).toBe(false);
+      });
    });
 
    it('should throw an error if CPF has more than 11 characters', () => {
@@ -62,17 +89,5 @@ describe('validateCPF', () => {
    it('should throw an error if CPF does not have only numbers', () => {
       const invalidCPF = '123456789dd';
       expect(() => validateCPF(invalidCPF)).toThrowError('CPF must have only numbers');
-   });
-
-   it('should throw an error if CPF has eleven equal numbers', () => {
-      expect(() => validateCPF('11111111111')).toThrowError('Invalid CPF');
-      expect(() => validateCPF('22222222222')).toThrowError('Invalid CPF');
-      expect(() => validateCPF('33333333333')).toThrowError('Invalid CPF');
-      expect(() => validateCPF('44444444444')).toThrowError('Invalid CPF');
-      expect(() => validateCPF('55555555555')).toThrowError('Invalid CPF');
-      expect(() => validateCPF('66666666666')).toThrowError('Invalid CPF');
-      expect(() => validateCPF('77777777777')).toThrowError('Invalid CPF');
-      expect(() => validateCPF('88888888888')).toThrowError('Invalid CPF');
-      expect(() => validateCPF('99999999999')).toThrowError('Invalid CPF');
    });
 });

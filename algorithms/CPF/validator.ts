@@ -4,15 +4,6 @@ import { getSecondCheckerTypist } from './utils/getSecondCheckerTypist';
 export function validateCPF(CPF: string) {
    const formattedCPF = CPF.trim().replace(/[.-]/g, '');
 
-   const regExp = new RegExp(/[^0-9]/g);
-   if (regExp.test(formattedCPF)) {
-      throw new Error('CPF must have only numbers');
-   }
-
-   if (formattedCPF.length !== 11) {
-      throw new Error('CPF must have 11 characters length');
-   }
-
    if (
       formattedCPF === '11111111111' ||
       formattedCPF === '22222222222' ||
@@ -24,7 +15,16 @@ export function validateCPF(CPF: string) {
       formattedCPF === '88888888888' ||
       formattedCPF === '99999999999'
    ) {
-      throw new Error('Invalid CPF');
+      return false;
+   }
+
+   const regExp = new RegExp(/[^0-9]/g);
+   if (regExp.test(formattedCPF)) {
+      throw new Error('CPF must have only numbers');
+   }
+
+   if (formattedCPF.length !== 11) {
+      throw new Error('CPF must have 11 characters length');
    }
 
    const firstNineCPFDigits = formattedCPF.substring(0, 9);
