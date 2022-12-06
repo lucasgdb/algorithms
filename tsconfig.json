@@ -3,7 +3,10 @@
       "noImplicitAny": true,
       "noImplicitThis": true,
       "strictNullChecks": true,
-      "forceConsistentCasingInFileNames": false
+      "forceConsistentCasingInFileNames": false,
+      "target": "ESNext",
+      "module": "ESNext",
+      "moduleResolution": "node"
    },
    "include": ["algorithms", "utils"],
    "exclude": ["node_modules"]
